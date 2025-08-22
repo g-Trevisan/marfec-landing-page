@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-export function GallerySection() {
+export default function Carrossel() {
   const galleryImages = [
     {
       url: "https://images.unsplash.com/photo-1632823471565-1ecdf4ef7df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",

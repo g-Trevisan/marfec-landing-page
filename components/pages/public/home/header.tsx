@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X, Car } from "lucide-react";
-export function Header() {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   useEffect(() => {

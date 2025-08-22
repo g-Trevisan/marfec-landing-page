@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
-export function AboutSection() {
+export default function Sobre() {
   return (
     <section id="about" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">

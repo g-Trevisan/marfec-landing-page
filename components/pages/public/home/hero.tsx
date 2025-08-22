@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-export function HeroSection() {
+export default function MarfecQualidade() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {

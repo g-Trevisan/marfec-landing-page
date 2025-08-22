@@ -9,7 +9,7 @@ import {
   Clock2,
   ThumbsUp,
 } from "lucide-react";
-export function ContactSection() {
+export default function Contatos() {
   return (
     <section id="contact" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">

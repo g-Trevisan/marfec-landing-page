@@ -7,7 +7,7 @@ interface TestimonialProps {
   text: string;
   rating: number;
 }
-function TestimonialCard({ name, text, rating }: TestimonialProps) {
+function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
       <div className="flex mb-4">
@@ -33,7 +33,8 @@ function TestimonialCard({ name, text, rating }: TestimonialProps) {
     </div>
   );
 }
-export function TestimonialsSection() {
+
+export function AvaliacoesClientes() {
   const testimonials = [
     {
       name: "Carlos Silva",
@@ -111,7 +112,7 @@ export function TestimonialsSection() {
                   key={index}
                   className="w-full sm:w-1/2 lg:w-1/3 px-3 flex-shrink-0"
                 >
-                  <TestimonialCard
+                  <AvaliacaoCard
                     name={testimonial.name}
                     text={testimonial.text}
                     rating={testimonial.rating}

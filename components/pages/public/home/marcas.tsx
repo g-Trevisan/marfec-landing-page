@@ -32,7 +32,7 @@ function VehicleTypeCard({
     </div>
   );
 }
-export function BrandsSection() {
+export default function MarcasAtendidas() {
   const vehicleTypes = [
     {
       icon: <Car size={28} />,

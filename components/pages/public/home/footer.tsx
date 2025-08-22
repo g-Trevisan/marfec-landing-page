@@ -1,6 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Twitter } from "lucide-react";
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="bg-black text-white py-12">
       <div className="container mx-auto px-4">

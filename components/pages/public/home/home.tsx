@@ -1,26 +1,24 @@
-import { TestimonialsSection } from "./avaliacoes-clientes";
-import { GallerySection } from "./carrossel";
-import { ContactSection } from "./contato";
-import { Footer } from "./footer";
-import { Header } from "./header";
-import { HeroSection } from "./hero";
-import { BrandsSection } from "./marcas";
-import { ServicesSection } from "./servicos";
-import { AboutSection } from "./sobre";
+import { AvaliacoesClientes } from "./avaliacoes-clientes";
+import Carrossel from "./carrossel";
+import Contatos from "./contato";
+import Footer from "./footer";
+import Header from "./header";
+import MarfecQualidade from "./hero";
+import MarcasAtendidas from "./marcas";
+import ServicosPrestados from "./servicos";
+import Sobre from "./sobre";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="h-full bg-white">
       <Header />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <BrandsSection />
-        <AboutSection />
-        <TestimonialsSection />
-        <GallerySection />
-        <ContactSection />
-      </main>
+      <MarfecQualidade />
+      <ServicosPrestados />
+      <MarcasAtendidas />
+      <Sobre />
+      <AvaliacoesClientes />
+      <Carrossel />
+      <Contatos />
       <Footer />
     </div>
   );

@@ -16,7 +16,7 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
     </div>
   );
 }
-export function ServicesSection() {
+export default function ServicosPrestados() {
   const services = [
     {
       icon: <Battery size={28} />,
