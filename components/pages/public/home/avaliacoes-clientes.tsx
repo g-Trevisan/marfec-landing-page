@@ -23,7 +23,7 @@ function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
           />
         ))}
       </div>
-      <p className="text-gray-600 italic mb-6">"{text}"</p>
+      <p className="text-gray-600 italic mb-6">&quot;{text}&quot;</p>
       <div className="flex items-center">
         <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 mr-3">
           {name.charAt(0)}
@@ -73,20 +73,20 @@ export function AvaliacoesClientes() {
       prevIndex === 0 ? testimonials.length - 3 : prevIndex - 1
     );
   };
-  const visibleTestimonials = () => {
-    // For mobile: show one testimonial
-    if (typeof window !== "undefined" && window.innerWidth < 640) {
-      return testimonials.slice(currentIndex, currentIndex + 1);
-    }
-    // For tablets: show two testimonials
-    else if (typeof window !== "undefined" && window.innerWidth < 1024) {
-      return testimonials.slice(currentIndex, currentIndex + 2);
-    }
-    // For desktop: show three testimonials
-    else {
-      return testimonials.slice(currentIndex, currentIndex + 3);
-    }
-  };
+  // const visibleTestimonials = () => {
+  //   // For mobile: show one testimonial
+  //   if (typeof window !== "undefined" && window.innerWidth < 640) {
+  //     return testimonials.slice(currentIndex, currentIndex + 1);
+  //   }
+  //   // For tablets: show two testimonials
+  //   else if (typeof window !== "undefined" && window.innerWidth < 1024) {
+  //     return testimonials.slice(currentIndex, currentIndex + 2);
+  //   }
+  //   // For desktop: show three testimonials
+  //   else {
+  //     return testimonials.slice(currentIndex, currentIndex + 3);
+  //   }
+  // };
   return (
     <section id="testimonials" className="py-16 md:py-24">
       <div className="container mx-auto px-4">

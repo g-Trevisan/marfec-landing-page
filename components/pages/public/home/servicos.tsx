@@ -37,7 +37,7 @@ export default function ServicosPrestados() {
         "Leitura e interpretação de falhas com equipamentos de última geração.",
     },
     {
-      icon: <div size={28} />,
+      icon: <Car size={28} />,
       title: "Revisão Geral",
       description:
         "Checagem completa dos componentes elétricos e mecânicos do seu veículo.",
