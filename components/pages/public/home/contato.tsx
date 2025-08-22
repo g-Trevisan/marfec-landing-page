@@ -8,6 +8,7 @@ import {
   ShieldCheck,
   Clock2,
   ThumbsUp,
+  ChartPie,
 } from "lucide-react";
 export default function Contatos() {
   return (
@@ -158,8 +159,7 @@ export default function Contatos() {
               </div>
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
-                  {/* <div size={24} /> */}
-                  <div className="w-12 h-12"></div>
+                  <ChartPie size={24} />
                 </div>
                 <div>
                   <h4 className="text-lg font-medium mb-1">
