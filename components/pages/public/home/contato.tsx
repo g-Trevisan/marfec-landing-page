@@ -190,7 +190,7 @@ export default function Contatos() {
             </div>
             <div className="mt-8 text-center">
               <a
-                href="https://wa.me/5511987654321"
+                href="https://wa.me/54992739290"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#FF6B00] text-white px-6 py-3 rounded-md hover:bg-[#e05e00] transition-colors font-medium"
