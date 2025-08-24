@@ -1,30 +1,64 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, Car } from "lucide-react";
+import { Menu, Car } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+const NAV_LINKS = [
+  { id: "services", label: "Serviços" },
+  { id: "brands", label: "Veículos" },
+  { id: "about", label: "Sobre Nós" },
+  { id: "testimonials", label: "Depoimentos" },
+  { id: "gallery", label: "Galeria" },
+];
+
+function NavLink({
+  id,
+  label,
+  onClick,
+  isPrimary = false,
+}: {
+  id: string;
+  label: string;
+  onClick: (id: string) => void;
+  isPrimary?: boolean;
+}) {
+  return (
+    <button
+      onClick={() => onClick(id)}
+      className={`w-full text-left px-4 py-2 rounded-md transition-colors ${
+        isPrimary
+          ? "bg-[#FF6B00] text-white hover:bg-[#e05e00]"
+          : "text-black hover:text-[#FF6B00]"
+      }`}
+    >
+      {label}
+    </button>
+  );
+}
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false); // controla abertura do sheet
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setMobileMenuOpen(false);
+      element.scrollIntoView({ behavior: "smooth" });
     }
+    setOpen(false); // fecha o menu depois de clicar
   };
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -33,7 +67,8 @@ export default function Header() {
           : "bg-black/70 backdrop-blur-md py-4"
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="mx-auto px-2 lg:px-4 flex justify-between items-center">
+        {/* Logo */}
         <div className="flex items-center">
           <div
             className={`w-10 h-10 rounded-full ${
@@ -53,108 +88,56 @@ export default function Header() {
             MARFEC
           </span>
         </div>
+
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <button
-            onClick={() => scrollToSection("services")}
-            className={`${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-[#FF6B00] transition-colors`}
-          >
-            Serviços
-          </button>
-          <button
-            onClick={() => scrollToSection("brands")}
-            className={`${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-[#FF6B00] transition-colors`}
-          >
-            Veículos
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className={`${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-[#FF6B00] transition-colors`}
-          >
-            Sobre Nós
-          </button>
-          <button
-            onClick={() => scrollToSection("testimonials")}
-            className={`${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-[#FF6B00] transition-colors`}
-          >
-            Depoimentos
-          </button>
-          <button
-            onClick={() => scrollToSection("gallery")}
-            className={`${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-[#FF6B00] transition-colors`}
-          >
-            Galeria
-          </button>
+          {NAV_LINKS.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className={`${
+                isScrolled ? "text-black" : "text-white"
+              } hover:text-[#FF6B00] transition-colors`}
+            >
+              {link.label}
+            </button>
+          ))}
           <button
             onClick={() => scrollToSection("contact")}
-            className={`${
-              isScrolled ? "text-black" : "text-white"
-            } hover:text-[#FF6B00] transition-colors bg-[#FF6B00] px-5 py-2.5 rounded-md hover:bg-[#e05e00] font-medium`}
+            className="bg-[#FF6B00] text-white px-5 py-2.5 rounded-md hover:bg-[#e05e00] font-medium"
           >
             Contato
           </button>
         </nav>
-        {/* Mobile Menu Button */}
-        <button
-          className={`md:hidden ${isScrolled ? "text-black" : "text-white"}`}
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+
+        {/* Mobile Navigation (Sheet do shadcn) */}
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger asChild>
+            <button
+              className={`md:hidden ${isScrolled ? "text-black" : "text-white"}`}
+            >
+              <Menu size={24} />
+            </button>
+          </SheetTrigger>
+          <SheetContent side="top" className="p-4">
+            <div className="flex flex-col space-y-4">
+              {NAV_LINKS.map((link) => (
+                <NavLink
+                  key={link.id}
+                  {...link}
+                  onClick={scrollToSection}
+                />
+              ))}
+              <NavLink
+                id="contact"
+                label="Contato"
+                onClick={scrollToSection}
+                isPrimary
+              />
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <button
-              onClick={() => scrollToSection("services")}
-              className="text-black hover:text-[#FF6B00] transition-colors py-2"
-            >
-              Serviços
-            </button>
-            <button
-              onClick={() => scrollToSection("brands")}
-              className="text-black hover:text-[#FF6B00] transition-colors py-2"
-            >
-              Veículos
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-black hover:text-[#FF6B00] transition-colors py-2"
-            >
-              Sobre Nós
-            </button>
-            <button
-              onClick={() => scrollToSection("testimonials")}
-              className="text-black hover:text-[#FF6B00] transition-colors py-2"
-            >
-              Depoimentos
-            </button>
-            <button
-              onClick={() => scrollToSection("gallery")}
-              className="text-black hover:text-[#FF6B00] transition-colors py-2"
-            >
-              Galeria
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-black hover:text-[#FF6B00] transition-colors py-2 bg-[#FF6B00] text-white px-4 rounded-md hover:bg-[#e05e00] w-full"
-            >
-              Contato
-            </button>
-          </div>
-        </div>
-      )}
     </header>
   );
 }
