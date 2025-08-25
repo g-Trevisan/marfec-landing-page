@@ -10,15 +10,15 @@ export default function Sobre() {
               Sobre a Marfec
             </h2>
             <p className="text-gray-600 mb-6">
-              Há mais de 15 anos no mercado, a Marfec se destaca pela excelência
-              em serviços de elétrica automotiva e ar condicionado. Nossa equipe
+              Com 15 anos de experiência, a Marfec se destaca pela excelência
+              em serviços de elétrica automotiva e ar condicionado e mecânica automotiva. Nossa equipe
               é formada por profissionais altamente qualificados e apaixonados
               por automóveis.
             </p>
             <p className="text-gray-600 mb-6">
               Investimos constantemente em tecnologia e capacitação para
               oferecer o que há de melhor em diagnóstico e soluções para o seu
-              veículo. Nosso compromisso é com a qualidade, eficiência e
+              veículo. Nosso compromisso é com a qualidade, eficiência e com a
               satisfação dos nossos clientes.
             </p>
             <div className="space-y-3">

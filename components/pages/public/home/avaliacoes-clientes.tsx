@@ -37,28 +37,28 @@ function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
 export function AvaliacoesClientes() {
   const testimonials = [
     {
-      name: "Carlos Silva",
-      text: "Excelente atendimento! Resolveram o problema do ar condicionado do meu carro em poucas horas. Super recomendo!",
+      name: "Jonatan Soares",
+      text: "Confiança, credibilidade, qualidade, eficiência e serviço de primeira. Pessoal muito gente boa, só trabalho com eles. Garanto a vocês que são os melhores da região.",
       rating: 5,
     },
     {
-      name: "Ana Oliveira",
-      text: "Profissionais muito capacitados e atenciosos. Diagnóstico preciso e preço justo. Meu carro está funcionando perfeitamente.",
+      name: "Leandro",
+      text: "Profissionais bem qualificados e preparados, trabalho realizado com total cuidado, tratamento especial com o veículo, local bem organizado, muito top, super indico.",
       rating: 5,
     },
     {
-      name: "Roberto Almeida",
-      text: "Já tentei resolver o problema elétrico do meu carro em outras oficinas sem sucesso. Na Marfec, resolveram rapidamente. Estou muito satisfeito!",
+      name: "Anderson",
+      text: "Só levo meu carro na Marfec, profissionais de verdade, serviço de qualidade indiscutível, sempre que precisei me deram suporte, sem falar na agilidade do serviço e na honestidade!",
       rating: 4,
     },
     {
-      name: "Juliana Costa",
-      text: "Atendimento de primeira qualidade. Equipe muito profissional e transparente. Recomendo para todos que precisam de serviços automotivos confiáveis.",
+      name: "Lucas Oliveira",
+      text: "Serviço de alta qualidade, realizado por profissionais atenciosos que explicam cada detalhe do procedimento sem enrolação. Recomendo pela eficiência e transparência.",
       rating: 5,
     },
     {
-      name: "Marcos Pereira",
-      text: "Fiz a manutenção do ar condicionado do meu carro e fiquei impressionado com a eficiência e rapidez. Excelente serviço!",
+      name: "Silvio",
+      text: "Ótimo, muito bem atendido, ótimos profissionais, super recomendo!",
       rating: 5,
     },
   ];

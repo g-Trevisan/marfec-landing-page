@@ -34,7 +34,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">
-            © 2023 Marfec. Todos os direitos reservados.
+            © 2023 Marfec. Todos os direitos reservados. CNOJ: 52.104.793/0001-92
           </p>
           <div className="mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white mr-6">

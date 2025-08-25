@@ -38,9 +38,9 @@ export default function Contatos() {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Endereço</h4>
                     <p className="text-gray-600">
-                      Av. Principal, 1234 - Centro
+                      Rua. Noralina Julieta Ribeiro da Silva, 1504 - Serrano
                       <br />
-                      São Paulo, SP - CEP 01234-567
+                      Caxias do Sul, RS - CEP 95059-590
                     </p>
                   </div>
                 </div>
@@ -51,10 +51,10 @@ export default function Contatos() {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Telefone</h4>
                     <a
-                      href="tel:1112345678"
+                      href="tel:54992739290"
                       className="text-gray-600 hover:text-[#FF6B00]"
                     >
-                      (11) 1234-5678
+                      (54) 99273-9290
                     </a>
                     <p className="text-gray-500 text-sm">Horário comercial</p>
                   </div>
@@ -66,12 +66,12 @@ export default function Contatos() {
                   <div>
                     <h4 className="text-lg font-medium mb-1">WhatsApp</h4>
                     <a
-                      href="https://wa.me/5511987654321"
+                      href="https://wa.me/54992739290"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-[#FF6B00]"
                     >
-                      (11) 98765-4321
+                      (54) 99273-9290
                     </a>
                     <p className="text-gray-500 text-sm">Resposta rápida</p>
                   </div>
@@ -100,7 +100,6 @@ export default function Contatos() {
                       Horário de Funcionamento
                     </h4>
                     <p className="text-gray-600">Segunda a Sexta: 8h às 18h</p>
-                    <p className="text-gray-600">Sábado: 8h às 12h</p>
                   </div>
                 </div>
               </div>
@@ -113,10 +112,10 @@ export default function Contatos() {
               <div className="flex items-center">
                 <Phone size={20} className="mr-2 text-[#FF6B00]" />
                 <a
-                  href="tel:1199999999"
+                  href="tel:54992739290"
                   className="text-lg font-medium hover:text-[#FF6B00] transition-colors"
                 >
-                  (11) 99999-9999
+                  (54) 9 9273-9290
                 </a>
               </div>
             </div>
@@ -137,7 +136,7 @@ export default function Contatos() {
                   </h4>
                   <p className="text-gray-600">
                     Todos os nossos serviços possuem garantia. Utilizamos apenas
-                    peças originais e de alta qualidade para assegurar o melhor
+                    peças originais e de primeira qualidade para assegurar o melhor
                     desempenho do seu veículo.
                   </p>
                 </div>
