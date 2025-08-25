@@ -10,16 +10,16 @@ export default function Sobre() {
               Sobre a Marfec
             </h2>
             <p className="text-gray-600 mb-6">
-              Com 15 anos de experiência, a Marfec se destaca pela excelência
-              em serviços de elétrica automotiva e ar condicionado e mecânica automotiva. Nossa equipe
-              é formada por profissionais altamente qualificados e apaixonados
+              Com 15 anos de experiência, a equipe Marfec se destaca pelo alto desempenho
+              em serviços de elétrica automotiva, ar condicionado e mecânica automotiva. Formamos
+              um grupo de profissionais altamente qualificados e apaixonados
               por automóveis.
             </p>
             <p className="text-gray-600 mb-6">
               Investimos constantemente em tecnologia e capacitação para
               oferecer o que há de melhor em diagnóstico e soluções para o seu
               veículo. Nosso compromisso é com a qualidade, eficiência e com a
-              satisfação dos nossos clientes.
+              sua satisfação.
             </p>
             <div className="space-y-3">
               <div className="flex items-start">
@@ -56,6 +56,15 @@ export default function Sobre() {
                 />
                 <p className="text-gray-700">
                   Garantia em todos os serviços realizados
+                </p>
+              </div>
+                <div className="flex items-start">
+                <CheckCircle2
+                  className="text-[#FF6B00] mr-3 mt-1 flex-shrink-0"
+                  size={20}
+                />
+                <p className="text-gray-700">
+                  A primeira oficina a aceitar Bitcoin como forma de pagamento
                 </p>
               </div>
             </div>

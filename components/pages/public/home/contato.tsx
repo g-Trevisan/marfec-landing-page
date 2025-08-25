@@ -78,28 +78,13 @@ export default function Contatos() {
                 </div>
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
-                    <Mail size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium mb-1">Email</h4>
-                    <a
-                      href="mailto:contato@marfec.com.br"
-                      className="text-gray-600 hover:text-[#FF6B00]"
-                    >
-                      contato@marfec.com.br
-                    </a>
-                    <p className="text-gray-500 text-sm">Para orçamentos</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
                     <Clock size={24} />
                   </div>
                   <div>
                     <h4 className="text-lg font-medium mb-1">
                       Horário de Funcionamento
                     </h4>
-                    <p className="text-gray-600">Segunda a Sexta: 8h às 18h</p>
+                    <p className="text-gray-600">Segunda a Sexta: 8h às 12h - 13:30 às 18h</p>
                   </div>
                 </div>
               </div>
@@ -112,7 +97,7 @@ export default function Contatos() {
               <div className="flex items-center">
                 <Phone size={20} className="mr-2 text-[#FF6B00]" />
                 <a
-                  href="tel:54992739290"
+                  href="https://wa.me/54992739290" target="_blank"
                   className="text-lg font-medium hover:text-[#FF6B00] transition-colors"
                 >
                   (54) 9 9273-9290
@@ -173,6 +158,21 @@ export default function Contatos() {
               </div>
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
+                  <ChartPie size={24} />
+                </div>
+              <div>
+                  <h4 className="text-lg font-medium mb-1">
+                    À frente do mercado
+                  </h4>
+                  <p className="text-gray-600">
+                    Buscando ampliar nossos serviços e oferecer o que há de melhor para nossos 
+                    clientes, estamos sempre atentos às novidades do mercado automotivo. 
+                    E somos a primeira oficina em Caxias do Sul a aceitar Bitcoin como forma de pagamento.
+                  </p>
+                </div>
+                </div>
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
                   <ThumbsUp size={24} />
                 </div>
                 <div>
@@ -180,9 +180,8 @@ export default function Contatos() {
                     Experiência Comprovada
                   </h4>
                   <p className="text-gray-600">
-                    Com mais de 15 anos no mercado, nossa equipe de técnicos
-                    certificados possui vasta experiência em elétrica automotiva
-                    e ar condicionado.
+                    Com mais de 15 anos de experiência, nossa equipe de técnicos
+                    certificados possui vasta experiência em diversas áreas que abrangem a reparação automotiva.
                   </p>
                 </div>
               </div>
@@ -192,7 +191,7 @@ export default function Contatos() {
                 href="https://wa.me/54992739290"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#FF6B00] text-white px-6 py-3 rounded-md hover:bg-[#e05e00] transition-colors font-medium"
+                className="inline-block bg-[#229922] text-white px-6 py-3 rounded-md hover:bg-[#228522] transition-colors font-medium"
               >
                 Fale Conosco pelo WhatsApp
               </a>

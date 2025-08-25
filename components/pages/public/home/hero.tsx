@@ -16,12 +16,12 @@ export default function MarfecQualidade() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Marfec: Excelência em Elétrica Automotiva e Ar Condicionado
+            Marfec: Excelência em reparação automotiva
           </h1>
           <p className="text-lg md:text-xl opacity-90 mb-8">
-            Soluções completas para seu veículo com a qualidade e o
-            profissionalismo que você merece. Atendemos todas as marcas com
-            tecnologia de ponta.
+            Investimos constantemente em tecnologia e capacitação para
+            oferecer o que há de melhor em diagnóstico e soluções para o seu
+            veículo.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button
