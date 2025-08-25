@@ -1,5 +1,5 @@
 import React from "react";
-import { Battery, Wind, Car, Cpu, Gauge } from "lucide-react";
+import { Battery, Wind, Car, Cpu, Gauge, Activity, Zap } from "lucide-react";
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
@@ -19,7 +19,7 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
 export default function ServicosPrestados() {
   const services = [
     {
-      icon: <Battery size={28} />,
+      icon: <Zap size={28} />,
       title: "Elétrica Automotiva",
       description:
         "Diagnóstico e reparo de sistemas elétricos, alternadores, motores de partida e mais.",
@@ -31,19 +31,19 @@ export default function ServicosPrestados() {
         "Manutenção, recarga de gás, limpeza e reparo completo do sistema de climatização.",
     },
     {
-      icon: <Cpu size={28} />,
-      title: "Diagnóstico Eletrônico",
+      icon: <Activity size={28} />,
+      title: "Diagnóstico Avançado",
       description:
         "Leitura e interpretação de falhas com equipamentos de última geração.",
     },
     {
       icon: <Car size={28} />,
-      title: "Revisão Geral",
+      title: "Mecânica Automotiva",
       description:
         "Checagem completa dos componentes elétricos e mecânicos do seu veículo.",
     },
     {
-      icon: <Car size={28} />,
+      icon: <Cpu size={28} />,
       title: "Injeção Eletrônica",
       description:
         "Diagnóstico e reparo de problemas na injeção eletrônica para melhor desempenho.",
@@ -64,7 +64,7 @@ export default function ServicosPrestados() {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Oferecemos soluções completas para garantir o melhor desempenho e
-            conforto para o seu veículo.
+            conforto do seu veículo.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">

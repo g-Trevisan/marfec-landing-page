@@ -1,5 +1,5 @@
 import React from "react";
-import { Car, Truck, Tractor, Bike, ShieldCheck, Wrench } from "lucide-react";
+import { Car, Truck, Tractor, Bike, ShieldCheck, Wrench, Activity, CircleParking } from "lucide-react";
 interface VehicleTypeCardProps {
   icon: React.ReactNode;
   title: string;

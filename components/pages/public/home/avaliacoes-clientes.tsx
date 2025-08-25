@@ -49,7 +49,7 @@ export function AvaliacoesClientes() {
     {
       name: "Anderson",
       text: "Só levo meu carro na Marfec, profissionais de verdade, serviço de qualidade indiscutível, sempre que precisei me deram suporte, sem falar na agilidade do serviço e na honestidade!",
-      rating: 4,
+      rating: 5,
     },
     {
       name: "Lucas Oliveira",
