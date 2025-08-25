@@ -7,6 +7,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
   { id: "services", label: "Serviços" },
@@ -28,22 +29,23 @@ function NavLink({
   isPrimary?: boolean;
 }) {
   return (
-    <button
+    <Button
+      variant={isPrimary ? "default" : "ghost"}
       onClick={() => onClick(id)}
-      className={`w-full text-left px-4 py-2 rounded-md transition-colors ${
+      className={`w-full justify-start cursor-pointer ${
         isPrimary
-          ? "bg-[#FF6B00] text-white hover:bg-[#e05e00]"
-          : "text-black hover:text-[#FF6B00]"
+          ? "bg-[#FF6B00] hover:bg-[#e05e00] text-white"
+          : "hover:text-[#FF6B00] text-black md:text-inherit"
       }`}
     >
       {label}
-    </button>
+    </Button>
   );
 }
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [open, setOpen] = useState(false); // controla abertura do sheet
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -56,7 +58,7 @@ export default function Header() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setOpen(false); // fecha o menu depois de clicar
+    setOpen(false);
   };
 
   return (
@@ -90,37 +92,41 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           {NAV_LINKS.map((link) => (
-            <button
+            <Button
               key={link.id}
+              variant="ghost"
               onClick={() => scrollToSection(link.id)}
-              className={`${
+              className={`transition-colors  ${
                 isScrolled ? "text-black" : "text-white"
-              } hover:text-[#FF6B00] transition-colors`}
+              } hover:text-[#FF6B00]`}
             >
               {link.label}
-            </button>
+            </Button>
           ))}
-          <button
+          <Button
             onClick={() => scrollToSection("contact")}
-            className="bg-[#FF6B00] text-white px-5 py-2.5 rounded-md hover:bg-[#e05e00] font-medium"
+            className="bg-[#FF6B00] hover:bg-[#e05e00] text-white px-5 py-2.5 font-medium"
           >
             Contato
-          </button>
+          </Button>
         </nav>
 
-        {/* Mobile Navigation (Sheet do shadcn) */}
+        {/* Mobile Navigation */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
-            <button
-              className={`md:hidden ${isScrolled ? "text-black" : "text-white"}`}
+            <Button
+              variant="ghost"
+              className={`md:hidden p-2 ${
+                isScrolled ? "text-black" : "text-white"
+              }`}
             >
               <Menu size={24} />
-            </button>
+            </Button>
           </SheetTrigger>
           <SheetContent side="top" className="p-4">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2">
               {NAV_LINKS.map((link) => (
                 <NavLink
                   key={link.id}
