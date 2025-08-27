@@ -182,7 +182,7 @@ const galleryImages = [
   {
     url: "/images/carrossel/jetta.jpg",
     alt: "Serviço de ar-condicionado automotivo",
-    caption: "",
+    caption: "Diagnóstico eletrônico de última geração",
   },
   {
     url: "/images/carrossel/jetta2.jpg",
