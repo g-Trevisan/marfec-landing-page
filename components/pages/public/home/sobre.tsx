@@ -1,5 +1,7 @@
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+
 export default function Sobre() {
   return (
     <section id="about" className="py-16 md:py-24 bg-gray-50">
@@ -69,8 +71,14 @@ export default function Sobre() {
               </div>
             </div>
           </div>
-          <div className="bg-gray-200 h-[400px] rounded-lg flex items-center justify-center">
-            <p className="text-gray-500 text-lg">Imagem da oficina ou equipe</p>
+          <div className="bg h-[400px] rounded-lg flex items-center justify-center">
+            <Image
+              src="/images/logos/equipe.jpg"
+              alt="Imagem da oficina ou equipe"
+              width={320}
+              height={180}
+              className="object-cover rounded-lg">
+            </Image>
           </div>
         </div>
       </div>

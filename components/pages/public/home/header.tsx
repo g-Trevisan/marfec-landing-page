@@ -71,8 +71,8 @@ export default function Header() {
     >
       <div className="mx-auto px-2 lg:px-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
-          <div
+          <div className="flex items-center">
+            <div
             className={`w-10 h-10 rounded-full ${
               isScrolled ? "bg-[#FF6B00]" : "bg-white"
             } flex items-center justify-center mr-3`}
