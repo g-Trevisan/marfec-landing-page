@@ -57,10 +57,15 @@ export function AvaliacoesClientes() {
       rating: 5,
     },
     {
-      name: "Silvio",
-      text: "Ótimo, muito bem atendido, ótimos profissionais, super recomendo!",
+      name: "Ricardo",
+      text: "Ótimo atendimento. Fiz um agendamento para resolver um problema no airbag e no farol dianteiro e aproveitei e fiz uma higienização do ar condicionado. Os rapazes foram muito atenciosos e o preço foi bem justo. Recomendo os serviços!!",
       rating: 5,
     },
+    {
+      name: "Alessandro",
+      text: "A Experiência foi bem positiva, atendimento de qualidade, serviço bem feito e com garantia. Recomendo.",
+      rating: 5,
+    }
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const nextSlide = () => {
@@ -74,9 +79,9 @@ export function AvaliacoesClientes() {
     );
   };
   // const visibleTestimonials = () => {
-  //   // For mobile: show one testimonial
+     // For mobile: show one testimonial
   //   if (typeof window !== "undefined" && window.innerWidth < 640) {
-  //     return testimonials.slice(currentIndex, currentIndex + 1);
+  //   return testimonials.slice(currentIndex, currentIndex + 1);
   //   }
   //   // For tablets: show two testimonials
   //   else if (typeof window !== "undefined" && window.innerWidth < 1024) {
@@ -123,14 +128,14 @@ export function AvaliacoesClientes() {
           </div>
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
+            className="absolute left-5 bottom-1/4 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
             aria-label="Depoimento anterior"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
+            className="absolute right-5 bottom-1/4 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
             aria-label="Próximo depoimento"
           >
             <ChevronRight size={20} />

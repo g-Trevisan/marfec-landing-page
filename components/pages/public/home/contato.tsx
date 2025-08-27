@@ -91,9 +91,9 @@ export default function Contatos() {
             </div>
             <div className="mt-8 bg-black text-white p-6 rounded-lg">
               <h4 className="text-lg font-medium mb-3">
-                Atendimento Prioritário
+                ATENDIMENTO WHATSAPP
               </h4>
-              <p className="mb-4">Disponível para clientes Marfec</p>
+              <p className="mb-4">Disponível de segunda a sexta-feira.</p>
               <div className="flex items-center">
                 <Phone size={20} className="mr-2 text-[#FF6B00]" />
                 <a

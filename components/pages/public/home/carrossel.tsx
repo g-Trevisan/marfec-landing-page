@@ -177,12 +177,12 @@ const galleryImages = [
   {
     url: "/images/carrossel/compass.jpg",
     alt: "Mecânico trabalhando em sistema elétrico automotivo",
-    caption: "Diagnóstico avançado de sistema elétrico",
+    caption: "Diagnóstico sistema de iluminação",
   },
   {
     url: "/images/carrossel/jetta.jpg",
     alt: "Serviço de ar-condicionado automotivo",
-    caption: "Diagnóstico eletrônico de última geração",
+    caption: "Revisão componentes de suspensão",
   },
   {
     url: "/images/carrossel/jetta2.jpg",
@@ -192,37 +192,37 @@ const galleryImages = [
   {
     url: "/images/carrossel/CARROSSEL1.jpg",
     alt: "Diagnóstico computadorizado de veículo",
-    caption: "Diagnóstico eletrônico de última geração",
+    caption: "Atendimento especializado para linha premium",
   },
   {
     url: "/images/carrossel/CARROSSEL2.jpg",
     alt: "Carro esportivo em manutenção",
-    caption: "Atendimento especializado para veículos de alto padrão",
+    caption: "Diagnóstico completo do sistema elétrico",
   },
   {
     url: "/images/carrossel/CARROSSEL3.jpg",
     alt: "Detalhe de reparo em componente automotivo",
-    caption: "Precisão em cada serviço",
+    caption: "Precisão e acertividade em cada serviço",
   },
   {
     url: "/images/carrossel/CARROSSEL4.jpg",
     alt: "Detalhe de reparo em componente automotivo",
-    caption: "Precisão em cada serviço",
+    caption: "Atenção aos mínimos detalhes",
   },
   {
     url: "/images/carrossel/CARROSSEL5.jpg",
     alt: "Detalhe de reparo em componente automotivo",
-    caption: "Precisão em cada serviço",
+    caption: "Transparencia, honestidade e profissionalismo",
   },
   {
     url: "/images/carrossel/CARROSSEL6.jpg",
     alt: "Detalhe de reparo em componente automotivo",
-    caption: "Precisão em cada serviço",
+    caption: "A atenção que seu carro precisa",
   },
   {
     url: "/images/carrossel/CARROSSEL7.jpg",
     alt: "Detalhe de reparo em componente automotivo",
-    caption: "Precisão em cada serviço",
+    caption: "Com a qualidade que você merece",
   },
 ];
 
