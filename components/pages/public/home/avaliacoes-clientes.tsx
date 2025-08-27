@@ -100,7 +100,7 @@ export function AvaliacoesClientes() {
             O que Nossos Clientes Dizem
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A satisfação de nossos clientes é a nossa maior recompensa. Confira
+            A satisfação dos clientes é a nossa maior recompensa! Mais avaliações como essas podem ser encontradas em nosso perfil do Google. Confira
             alguns depoimentos.
           </p>
         </div>
@@ -115,7 +115,7 @@ export function AvaliacoesClientes() {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full sm:w-1/2 lg:w-1/3 px-3 flex-shrink-0"
+                  className="w-full sm:w-1/2 lg:w-1/1 px-3 flex-shrink-0"
                 >
                   <AvaliacaoCard
                     name={testimonial.name}
