@@ -182,12 +182,12 @@ const galleryImages = [
   {
     url: "/images/carrossel/jetta.jpg",
     alt: "Serviço de ar-condicionado automotivo",
-    caption: "Manutenção de ar-condicionado",
+    caption: "",
   },
   {
     url: "/images/carrossel/jetta2.jpg",
     alt: "Carro sendo reparado na oficina",
-    caption: "Reparo completo de sistema elétrico",
+    caption: "Manutenção sistema de freios",
   },
   {
     url: "/images/carrossel/CARROSSEL1.jpg",

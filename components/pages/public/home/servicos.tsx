@@ -20,7 +20,7 @@ export default function ServicosPrestados() {
   const services = [
     {
       icon: <Zap size={28} />,
-      title: "Elétrica Automotiva",
+      title: "Elétrica",
       description:
         "Diagnóstico e reparo de sistemas elétricos, alternadores, motores de partida e mais.",
     },
@@ -37,8 +37,8 @@ export default function ServicosPrestados() {
         "Leitura e interpretação de falhas com equipamentos de última geração.",
     },
     {
-      icon: <Car size={28} />,
-      title: "Mecânica Automotiva",
+      icon: <Gauge size={28} />,
+      title: "Mecânica",
       description:
         "Checagem completa dos componentes elétricos e mecânicos do seu veículo.",
     },
@@ -49,7 +49,7 @@ export default function ServicosPrestados() {
         "Diagnóstico e reparo de problemas na injeção eletrônica para melhor desempenho.",
     },
     {
-      icon: <Gauge size={28} />,
+      icon: <Car size={28} />,
       title: "Higienização",
       description:
         "Limpeza profunda do sistema de ar condicionado, eliminando fungos e bactérias.",

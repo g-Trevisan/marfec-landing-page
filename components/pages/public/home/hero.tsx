@@ -19,7 +19,7 @@ export default function MarfecQualidade() {
             Marfec: Excelência em reparação automotiva
           </h1>
           <p className="text-lg md:text-xl opacity-90 mb-8">
-            Investimos constantemente em tecnologia e capacitação para
+            Investindo constantemente em tecnologia e capacitação para
             oferecer o que há de melhor em diagnóstico e soluções para o seu
             veículo.
           </p>
