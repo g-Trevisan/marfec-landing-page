@@ -34,25 +34,25 @@ export default function ServicosPrestados() {
       icon: <Activity size={28} />,
       title: "Diagnóstico Avançado",
       description:
-        "Leitura e interpretação de falhas com equipamentos de última geração.",
+        "Leitura e interpretação de falhas com equipamentos de última geração. ",
     },
     {
       icon: <Gauge size={28} />,
       title: "Mecânica",
       description:
-        "Checagem completa dos componentes elétricos e mecânicos do seu veículo.",
+        "Checagem completa dos componentes mecânicos do seu veículo. Troca de óleo, filtros e fluidos.",
     },
     {
       icon: <Cpu size={28} />,
       title: "Injeção Eletrônica",
       description:
-        "Diagnóstico e reparo de problemas na injeção eletrônica para melhor desempenho.",
+        "Diagnóstico e reparo de problemas na injeção eletrônica para melhor desempenho e economia de combustível.",
     },
     {
       icon: <Car size={28} />,
       title: "Higienização",
       description:
-        "Limpeza profunda do sistema de ar condicionado, eliminando fungos e bactérias.",
+        "Limpeza profunda do sistema de ar condicionado, eliminando fungos e bactérias. Melhorando a qualidade do ar e o conforto.",
     },
   ];
   return (
