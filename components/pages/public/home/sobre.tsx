@@ -12,7 +12,7 @@ export default function Sobre() {
               Sobre a Marfec
             </h2>
             <p className="text-gray-600 mb-6">
-              Com 15 anos de experiência, a equipe Marfec se destaca pelo alto desempenho
+              Com anos de experiência, a equipe Marfec se destaca pelo alto desempenho
               em serviços de elétrica automotiva, ar condicionado e mecânica automotiva. Formamos
               um grupo de profissionais altamente qualificados e apaixonados
               por automóveis.
