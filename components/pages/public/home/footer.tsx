@@ -72,14 +72,14 @@ export default function Footer() {
           <div className="items-center sm:items-start flex flex-col">
           {/* <div> */}
             <Image
-              src="/images/logos/marfec-sem-fundo.png"
+              src="/images/logos/FOTO DE PERFIL.png"
               alt="Logo Marfec"
               width={160}
               height={50} 
               priority
             />
             <p className="mt-2 text-gray-400">
-              Excelência em serviços automotivos
+              A oficina que você pode confiar. 
             </p>
           </div>
 
