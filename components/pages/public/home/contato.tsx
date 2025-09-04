@@ -30,7 +30,7 @@ export default function Contatos() {
               <h3 className="text-2xl font-semibold mb-6">
                 Informações de Contato
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-10">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
                     <MapPin size={24} />
@@ -42,21 +42,6 @@ export default function Contatos() {
                       <br />
                       Caxias do Sul, RS - CEP 95059-590
                     </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
-                    <Phone size={24} />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium mb-1">Telefone</h4>
-                    <a
-                      href="tel:54992739290"
-                      className="text-gray-600 hover:text-[#FF6B00]"
-                    >
-                      (54) 99273-9290
-                    </a>
-                    <p className="text-gray-500 text-sm">Horário comercial</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -89,7 +74,7 @@ export default function Contatos() {
                 </div>
               </div>
             </div>
-            <div className="mt-8 bg-black text-white p-6 rounded-lg">
+            <div className="mt-10 bg-black text-white p-6 rounded-lg">
               <h4 className="text-lg font-medium mb-3">
                 ATENDIMENTO WHATSAPP
               </h4>
