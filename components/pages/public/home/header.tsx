@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, Car } from "lucide-react";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
+
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
@@ -71,24 +73,24 @@ export default function Header() {
     >
       <div className="mx-auto px-2 lg:px-4 flex justify-between items-center">
         {/* Logo */}
-          <div className="flex items-center">
-            <div
-            className={`w-10 h-10 rounded-full ${
-              isScrolled ? "bg-[#FF6B00]" : "bg-white"
-            } flex items-center justify-center mr-3`}
-          >
-            <Car
-              size={24}
-              className={isScrolled ? "text-white" : "text-[#FF6B00]"}
+        <div className="flex items-center py-2 px-2">
+          {isScrolled ? (
+            <Image
+              src={"/images/logos/MARFEC_PRETO.png"}
+              alt="Logo branco Marfec"
+              width={80}
+              height={50}
+              priority
             />
-          </div>
-          <span
-            className={`text-2xl font-bold ${
-              isScrolled ? "text-black" : "text-white"
-            }`}
-          >
-            MARFEC
-          </span>
+          ) : (
+            <Image
+              src={"/images/logos/MARFEC_BRANCO.png"}
+              alt="Logo preto Marfec"
+              width={80}
+              height={50}
+              priority
+            />
+          )}
         </div>
 
         {/* Desktop Navigation */}

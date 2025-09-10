@@ -8,13 +8,21 @@ interface ServiceCardProps {
 function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-[#FF6B00]/20 hover:translate-y-[-5px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
       <div className="w-14 h-14 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mb-5">
+        
         {icon}
+        </div>
+        
       </div>
+      
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
+      
     </div>
+    
   );
+  
 }
 export default function ServicosPrestados() {
   const services = [
@@ -56,7 +64,7 @@ export default function ServicosPrestados() {
     },
   ];
   return (
-    <section id="services" className="py-16 md:py-24 bg-gray-50">
+    <section id="services" className="pt-16 md:pt-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -75,9 +83,23 @@ export default function ServicosPrestados() {
               title={service.title}
               description={service.description}
             />
+            
           ))}
+          </div>
+          </div>
+          <div className="flex text-center justify-center mt-20">
+          <a
+          href="https://wa.me/54992739290"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-60 h-16 py-4 bg-[#FF6B00] mx- text-white text-lg rounded-full hover:bg-[black] transition-colors font-medium">
+          Solicitar orçamento
+        </a>
+          
         </div>
-      </div>
+        
+      
     </section>
   );
+  
 }

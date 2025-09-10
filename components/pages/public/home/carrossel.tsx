@@ -352,6 +352,16 @@ export default function Carrossel() {
             ))}
         </div>
       </div>
+      <div className="flex text-center justify-center mt-25">
+          <a
+          href="https://wa.me/54992739290"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-60 h-16 py-4 bg-[#FF6B00] mx- text-white text-lg rounded-full hover:bg-[black] transition-colors font-medium">
+          Solicitar orçamento
+        </a>
+          
+        </div>
     </section>
   );
 }

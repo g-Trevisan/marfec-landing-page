@@ -26,7 +26,7 @@ export default function MarfecQualidade() {
           </div>
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Excelência em reparação automotiva
+            Reparação automotiva em Caxias do Sul
           </h1>
           <p className="text-lg md:text-xl opacity-90 mb-8">
             Investindo constantemente em tecnologia e capacitação para

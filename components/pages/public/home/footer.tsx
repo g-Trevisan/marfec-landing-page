@@ -79,7 +79,7 @@ export default function Footer() {
               priority
             />
             <p className="mt-2 text-gray-400">
-              A oficina que você pode confiar. 
+              Nosso maior compromisso é com a sua satisfação e segurança. 
             </p>
           </div>
 
