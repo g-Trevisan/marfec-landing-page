@@ -9,7 +9,7 @@ interface TestimonialProps {
 }
 function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
   return (
-    <div className="bg-white w-110 md:w-360 p-6 rounded-lg shadow-md border border-gray-100 content-center">
+    <div className="bg-white w-95 md:w-360 p-6 rounded-lg shadow-md border border-gray-100 content-center">
       <div className="flex content-center mb-4">
         {Array.from({
           length: 5,
