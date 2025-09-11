@@ -9,8 +9,8 @@ interface TestimonialProps {
 }
 function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
-      <div className="flex mb-4">
+    <div className="bg-white w-110 md:w-360 p-6 rounded-lg shadow-md border border-gray-100 content-center">
+      <div className="flex content-center mb-4">
         {Array.from({
           length: 5,
         }).map((_, i) => (
@@ -104,10 +104,10 @@ export function AvaliacoesClientes() {
             alguns depoimentos.
           </p>
         </div>
-        <div className="relative">
+        <div className="relative content-center">
           <div className="flex overflow-hidden">
             <div
-              className="flex transition-transform duration-300 ease-in-out"
+              className="flex content-center transition-transform duration-300 ease-in-out"
               style={{
                 transform: `translateX(-${currentIndex * (100)}%)`,
               }}
