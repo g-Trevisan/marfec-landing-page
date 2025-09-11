@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 export default function Contatos() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gray-50">
+    <section id="contact" className="pt-16 md:pt-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -184,6 +184,11 @@ export default function Contatos() {
           </div>
         </div>
       </div>
+      <div className="mt-15 flex justify-center text-center">
+        <h3 className="text-3xl md:text-4xl font-bold mb-4">Nossa localização</h3></div>
+        <div className="flex justify-center mt-4 ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4234.5125608973785!2d-51.13487862365711!3d-29.116193188856688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebd568b491167%3A0xa64c64784302309a!2sMarfec%20Servi%C3%A7os%20Automotivos!5e1!3m2!1spt-BR!2sbr!4v1757593932457!5m2!1spt-BR!2sbr" width="500" height="450" loading="lazy"></iframe>
+        </div>
     </section>
   );
 }

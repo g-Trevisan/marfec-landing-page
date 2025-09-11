@@ -59,7 +59,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Bitcoin, Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -104,13 +104,13 @@ export default function Footer() {
           {/* Social Media */}
         <div className="flex justify-center md:justify-end space-x-4">
           <a
-            href="https://facebook.com"
-            aria-label="Facebook"
+            href="https://btcmap.org/merchant/node:12548054548"
+            aria-label="Bitcoin"
             target="_blank"
             rel="noopener noreferrer"
             className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#FF6B00] transition-transform transform hover:scale-110"
           >
-            <Facebook size={22} />
+            <Bitcoin size={22} />
           </a>
 
           <a
@@ -121,16 +121,6 @@ export default function Footer() {
             className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#FF6B00] transition-transform transform hover:scale-110"
           >
             <Instagram size={22} />
-          </a>
-
-          <a
-            href="https://twitter.com"
-            aria-label="Twitter"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#FF6B00] transition-transform transform hover:scale-110"
-          >
-            <Twitter size={22} />
           </a>
         </div>
 
