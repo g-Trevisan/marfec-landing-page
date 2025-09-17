@@ -77,7 +77,7 @@ export default function Header() {
           {isScrolled ? (
             <Image
               src={"/images/logos/MARFEC_PRETO.png"}
-              alt="Logo branco Marfec"
+              alt="Logo preto Marfec"
               width={80}
               height={50}
               priority
@@ -85,7 +85,7 @@ export default function Header() {
           ) : (
             <Image
               src={"/images/logos/MARFEC_BRANCO.png"}
-              alt="Logo preto Marfec"
+              alt="Logo branco Marfec"
               width={80}
               height={50}
               priority
