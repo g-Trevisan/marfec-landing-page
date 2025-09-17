@@ -12,13 +12,15 @@ export default function HomePage() {
   return (
     <div className="h-full bg-white">
       <Header />
-      <MarfecQualidade />
-      <ServicosPrestados />
-      <MarcasAtendidas />
-      <Sobre />
-      <AvaliacoesClientes />
-      <Carrossel />
-      <Contatos />
+      <main>
+        <MarfecQualidade />
+        <ServicosPrestados />
+        <MarcasAtendidas />
+        <Sobre />
+        <AvaliacoesClientes />
+        <Carrossel />
+        <Contatos />
+      </main>
       <Footer />
     </div>
   );

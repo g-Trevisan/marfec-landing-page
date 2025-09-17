@@ -39,14 +39,14 @@ export default function MarfecQualidade() {
                 href="https://wa.me/54992739290"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#229922] text-white px-6 py-3 mx-2 mt-3 rounded-md hover:bg-[#228522] transition-colors font-medium"
+                className="inline-block bg-[#1A751A] text-white px-6 py-3 mx-2 mt-3 rounded-md hover:bg-[#156315] transition-colors font-medium"
               >
                 Fale Conosco pelo WhatsApp
               </a>
             
             <button
               onClick={() => scrollToSection("services")}
-              className="border-2 border-[#FF6B00] text-white px-6 py-3 mx-2 mt-3 rounded-md hover:bg-[#FF6B00] transition-colors font-medium">
+              className="border-2 border-[#FF6B00] text-white px-6 py-3 mx-2 mt-3 rounded-md hover:bg-[#AD4600] transition-colors font-medium">
               Conheça Nossos Serviços
             </button>
             </div>

@@ -176,7 +176,7 @@ export default function Contatos() {
                 href="https://wa.me/54992739290"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#229922] text-white px-6 py-3 rounded-md hover:bg-[#228522] transition-colors font-medium"
+                className="inline-block bg-[#1A751A] text-white px-6 py-3 rounded-md hover:bg-[#156315] transition-colors font-medium"
               >
                 Fale Conosco pelo WhatsApp
               </a>
@@ -187,7 +187,7 @@ export default function Contatos() {
       <div className="mt-15 flex justify-center text-center">
         <h3 className="text-3xl md:text-4xl font-bold mb-4">Nossa localização</h3></div>
         <div className="flex justify-center mt-4 ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4234.5125608973785!2d-51.13487862365711!3d-29.116193188856688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebd568b491167%3A0xa64c64784302309a!2sMarfec%20Servi%C3%A7os%20Automotivos!5e1!3m2!1spt-BR!2sbr!4v1757593932457!5m2!1spt-BR!2sbr" width="500" height="450" loading="lazy"></iframe>
+        <iframe title="Localização da Marfec no Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4234.5125608973785!2d-51.13487862365711!3d-29.116193188856688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebd568b491167%3A0xa64c64784302309a!2sMarfec%20Servi%C3%A7os%20Automotivos!5e1!3m2!1spt-BR!2sbr!4v1757593932457!5m2!1spt-BR!2sbr" width="500" height="450" loading="lazy"></iframe>
         </div>
     </section>
   );
