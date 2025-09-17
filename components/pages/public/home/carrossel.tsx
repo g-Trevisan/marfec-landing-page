@@ -357,7 +357,7 @@ export default function Carrossel() {
           href="https://wa.me/54992739290"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-60 h-16 py-4 bg-[#FF6B00] mx- text-white text-lg rounded-full hover:bg-[black] transition-colors font-medium">
+            className="w-60 h-16 py-4 bg-[#AD4600] mx- text-white text-lg rounded-full hover:bg-[#8A3800] transition-colors font-medium">
           Solicitar orçamento
         </a>
           

@@ -36,7 +36,7 @@ function NavLink({
       onClick={() => onClick(id)}
       className={`w-full justify-start cursor-pointer ${
         isPrimary
-          ? "bg-[#FF6B00] hover:bg-[#e05e00] text-white"
+          ? "bg-[#AD4600] hover:bg-[#8A3800] text-white"
           : "hover:text-[#FF6B00] text-black md:text-inherit"
       }`}
     >
@@ -94,7 +94,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav aria-label="Navegação principal" className="hidden md:flex items-center space-x-6">
           {NAV_LINKS.map((link) => (
             <Button
               key={link.id}
@@ -109,7 +109,7 @@ export default function Header() {
           ))}
           <Button
             onClick={() => scrollToSection("contact")}
-            className="bg-[#FF6B00] hover:bg-[#e05e00] text-white px-5 py-2.5 font-medium"
+            className="bg-[#AD4600] hover:bg-[#8A3800] text-white px-5 py-2.5 font-medium"
           >
             Contato
           </Button>

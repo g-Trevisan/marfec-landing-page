@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <nav className="flex justify-center md:justify-center space-x-6">
+            <nav aria-label="Navegação do rodapé" className="flex justify-center md:justify-center space-x-6">
               <Link
                 href="/politica-de-privacidade"
                 className="text-gray-400 hover:text-white transition-colors"
