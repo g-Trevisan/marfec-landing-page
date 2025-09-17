@@ -8,6 +8,12 @@ import MarcasAtendidas from "./marcas";
 import ServicosPrestados from "./servicos";
 import Sobre from "./sobre";
 
+/**
+ * O componente principal da página inicial.
+ * Ele monta todas as diferentes seções da página.
+ *
+ * @returns {React.ReactElement} A página inicial renderizada.
+ */
 export default function HomePage() {
   return (
     <div className="h-full bg-white">

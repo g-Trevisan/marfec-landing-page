@@ -2,13 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Menu, Car } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-
-} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 const NAV_LINKS = [
@@ -19,17 +14,27 @@ const NAV_LINKS = [
   { id: "gallery", label: "Galeria" },
 ];
 
-function NavLink({
-  id,
-  label,
-  onClick,
-  isPrimary = false,
-}: {
+/**
+ * Props para o componente NavLink.
+ * @property {string} id - O ID da seção para a qual rolar.
+ * @property {string} label - O texto a ser exibido para o link.
+ * @property {(id: string) => void} onClick - A função a ser chamada quando o link é clicado.
+ * @property {boolean} [isPrimary=false] - Se verdadeiro, o link terá um estilo primário.
+ */
+interface NavLinkProps {
   id: string;
   label: string;
   onClick: (id: string) => void;
   isPrimary?: boolean;
-}) {
+}
+
+/**
+ * Um componente de link de navegação que rola para uma seção específica na página.
+ *
+ * @param {NavLinkProps} props - As props para o componente NavLink.
+ * @returns {React.ReactElement} O componente NavLink renderizado.
+ */
+function NavLink({ id, label, onClick, isPrimary = false }: NavLinkProps) {
   return (
     <Button
       variant={isPrimary ? "default" : "ghost"}
@@ -45,6 +50,13 @@ function NavLink({
   );
 }
 
+/**
+ * O componente de cabeçalho para o site.
+ * Inclui o logotipo, navegação de desktop e uma folha de navegação móvel.
+ * O cabeçalho muda de aparência quando o usuário rola a página.
+ *
+ * @returns {React.ReactElement} O componente Header renderizado.
+ */
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -55,6 +67,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  /**
+   * Rola a página para a seção com o ID fornecido.
+   * @param {string} id - O ID da seção para a qual rolar.
+   */
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -93,7 +109,7 @@ export default function Header() {
           )}
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Navegação de Desktop */}
         <nav className="hidden md:flex items-center space-x-6">
           {NAV_LINKS.map((link) => (
             <Button
@@ -115,7 +131,7 @@ export default function Header() {
           </Button>
         </nav>
 
-        {/* Mobile Navigation */}
+        {/* Navegação Móvel */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Button

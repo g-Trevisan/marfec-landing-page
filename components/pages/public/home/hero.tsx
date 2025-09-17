@@ -2,7 +2,18 @@
 
 import React from "react";
 import Image from "next/image";
+
+/**
+ * A seção de destaque do site.
+ * Exibe o título principal, uma breve descrição e botões de chamada para ação.
+ *
+ * @returns {React.ReactElement} A seção de destaque renderizada.
+ */
 export default function MarfecQualidade() {
+  /**
+   * Rola a página para a seção com o ID fornecido.
+   * @param {string} id - O ID da seção para a qual rolar.
+   */
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -14,27 +25,27 @@ export default function MarfecQualidade() {
   return (
     <section className="relative w-full bg-black text-white pt-24 pb-16 md:pt-32 md:pb-24">
       <div className="absolute inset-0 bg-gradient-to-r from-black to-gray-900 opacity-90"></div>
-       <div className="container mx-auto px-4 relative z-10">
-         <div className="items-center flex flex-col md:pb-10">
-           {/* <div> */}
-           <Image
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="items-center flex flex-col md:pb-10">
+          {/* <div> */}
+          <Image
             src="/images/logos/FOTO DE PERFIL.png"
             alt="Logo Marfec"
             width={300}
             height={50}
-            priority/>
-          </div>
+            priority
+          />
+        </div>
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Reparação automotiva em Caxias do Sul
           </h1>
           <p className="text-lg md:text-xl opacity-90 mb-8">
-            Investindo constantemente em tecnologia e capacitação para
-            oferecer o que há de melhor em diagnóstico e soluções para o seu
-            veículo.
+            Investindo constantemente em tecnologia e capacitação para oferecer
+            o que há de melhor em diagnóstico e soluções para o seu veículo.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <div className="mt-8 text-center">
+            <div className="mt-8 text-center">
               <a
                 href="https://wa.me/54992739290"
                 target="_blank"
@@ -43,12 +54,13 @@ export default function MarfecQualidade() {
               >
                 Fale Conosco pelo WhatsApp
               </a>
-            
-            <button
-              onClick={() => scrollToSection("services")}
-              className="border-2 border-[#FF6B00] text-white px-6 py-3 mx-2 mt-3 rounded-md hover:bg-[#FF6B00] transition-colors font-medium">
-              Conheça Nossos Serviços
-            </button>
+
+              <button
+                onClick={() => scrollToSection("services")}
+                className="border-2 border-[#FF6B00] text-white px-6 py-3 mx-2 mt-3 rounded-md hover:bg-[#FF6B00] transition-colors font-medium"
+              >
+                Conheça Nossos Serviços
+              </button>
             </div>
           </div>
         </div>

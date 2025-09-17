@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script"; // 👈 importa aqui
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     "Serviços automotivos completos: troca de óleo, manutenção de motor, suspensão, freios, arrefecimento e ar-condicionado. Diagnóstico de falhas com agendamento prévio. Em Caxias do Sul.",
 };
 
+/**
+ * O layout raiz da aplicação.
+ * Ele configura a estrutura HTML, fontes e scripts do Google Analytics.
+ *
+ * @param {Readonly<{ children: React.ReactNode }>} props - As props para o componente RootLayout.
+ * @param {React.ReactNode} props.children - Os componentes filhos a serem renderizados dentro do layout.
+ * @returns {React.ReactElement} O componente RootLayout renderizado.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

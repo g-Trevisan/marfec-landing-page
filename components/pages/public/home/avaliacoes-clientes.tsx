@@ -2,11 +2,26 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+
+/**
+ * Props para o componente TestimonialCard.
+ * @property {string} name - O nome da pessoa que deu o depoimento.
+ * @property {string} text - O texto do depoimento.
+ * @property {number} rating - A avaliação dada pela pessoa (de 5).
+ */
 interface TestimonialProps {
   name: string;
   text: string;
   rating: number;
 }
+
+/**
+ * Um componente de cartão para exibir um único depoimento.
+ * Ele mostra a avaliação, o texto e o nome da pessoa.
+ *
+ * @param {TestimonialProps} props - As props para o componente TestimonialCard.
+ * @returns {React.ReactElement} O componente TestimonialCard renderizado.
+ */
 function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
   return (
     <div className="bg-white w-95 md:w-360 p-6 rounded-lg shadow-md border border-gray-100 content-center">
@@ -34,6 +49,12 @@ function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
   );
 }
 
+/**
+ * Uma seção que exibe depoimentos de clientes em um carrossel.
+ * Inclui botões de navegação para mover entre os depoimentos.
+ *
+ * @returns {React.ReactElement} A seção de Depoimentos de Clientes renderizada.
+ */
 export function AvaliacoesClientes() {
   const testimonials = [
     {
@@ -65,33 +86,29 @@ export function AvaliacoesClientes() {
       name: "Alessandro",
       text: "A Experiência foi bem positiva, atendimento de qualidade, serviço bem feito e com garantia. Recomendo.",
       rating: 5,
-    }
+    },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  /**
+   * Move o carrossel para o próximo slide.
+   * Se o slide atual for o último, ele volta para o início.
+   */
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 3 ? 0 : prevIndex + 1
     );
   };
+
+  /**
+   * Move o carrossel para o slide anterior.
+   * Se o slide atual for o primeiro, ele volta para o final.
+   */
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 3 : prevIndex - 1
     );
   };
-  // const visibleTestimonials = () => {
-     // For mobile: show one testimonial
-  //   if (typeof window !== "undefined" && window.innerWidth < 640) {
-  //   return testimonials.slice(currentIndex, currentIndex + 1);
-  //   }
-  //   // For tablets: show two testimonials
-  //   else if (typeof window !== "undefined" && window.innerWidth < 1024) {
-  //     return testimonials.slice(currentIndex, currentIndex + 2);
-  //   }
-  //   // For desktop: show three testimonials
-  //   else {
-  //     return testimonials.slice(currentIndex, currentIndex + 3);
-  //   }
-  // };
   return (
     <section id="testimonials" className="py-10 md:py-24">
       <div className="container mx-auto px-4">
@@ -109,13 +126,13 @@ export function AvaliacoesClientes() {
             <div
               className="flex content-center transition-transform duration-300 ease-in-out"
               style={{
-                transform: `translateX(-${currentIndex * (100)}%)`,
+                transform: `translateX(-${currentIndex * (100 / 3)}%)`,
               }}
             >
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full sm:w-1/2 lg:w-1/1 px-3 flex-shrink-0"
+                  className="w-full sm:w-1/2 lg:w-1/3 px-3 flex-shrink-0"
                 >
                   <AvaliacaoCard
                     name={testimonial.name}
@@ -128,14 +145,14 @@ export function AvaliacoesClientes() {
           </div>
           <button
             onClick={prevSlide}
-            className="absolute left-5 bottom-1/4 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
+            className="absolute left-5 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
             aria-label="Depoimento anterior"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-5 bottom-1/4 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
+            className="absolute right-5 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-[#FF6B00] z-10 focus:outline-none"
             aria-label="Próximo depoimento"
           >
             <ChevronRight size={20} />

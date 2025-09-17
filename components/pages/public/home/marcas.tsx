@@ -19,6 +19,11 @@ const brands = [
   { name: "VW", url: '/images/logos/vw.png' },
 ];
 
+/**
+ * Uma seção que exibe os logotipos das marcas de carros que a empresa atende.
+ *
+ * @returns {React.ReactElement} A seção de Marcas renderizada.
+ */
 export default function MarcasAtendidas() {
   return (
     <section id="brands" className="py-16 md:py-24 bg-gray-50">

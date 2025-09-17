@@ -3,13 +3,18 @@ import {
   MapPin,
   Phone,
   Clock,
-  Mail,
+  ThumbsUp,
+  ChartPie,
   MessageCircle,
   ShieldCheck,
   Clock2,
-  ThumbsUp,
-  ChartPie,
 } from "lucide-react";
+
+/**
+ * Uma seção que exibe informações de contato, motivos para escolher a empresa e um mapa.
+ *
+ * @returns {React.ReactElement} A seção de Contato renderizada.
+ */
 export default function Contatos() {
   return (
     <section id="contact" className="pt-16 md:pt-24 bg-gray-50">
@@ -24,7 +29,7 @@ export default function Contatos() {
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          {/* Contact Information */}
+          {/* Informações de Contato */}
           <div className="flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-semibold mb-6">
@@ -69,7 +74,9 @@ export default function Contatos() {
                     <h4 className="text-lg font-medium mb-1">
                       Horário de Funcionamento
                     </h4>
-                    <p className="text-gray-600">Segunda a Sexta: 8h às 12h - 13:30 às 18h</p>
+                    <p className="text-gray-600">
+                      Segunda a Sexta: 8h às 12h - 13:30 às 18h
+                    </p>
                   </div>
                 </div>
               </div>
@@ -82,7 +89,8 @@ export default function Contatos() {
               <div className="flex items-center">
                 <Phone size={20} className="mr-2 text-[#FF6B00]" />
                 <a
-                  href="https://wa.me/54992739290" target="_blank"
+                  href="https://wa.me/54992739290"
+                  target="_blank"
                   className="text-lg font-medium hover:text-[#FF6B00] transition-colors"
                 >
                   (54) 9 9273-9290
@@ -90,7 +98,7 @@ export default function Contatos() {
               </div>
             </div>
           </div>
-          {/* Why Choose Us Section - Replacing the contact form */}
+          {/* Seção Por que nos escolher - Substituindo o formulário de contato */}
           <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold mb-6">
               Por que escolher a Marfec?
@@ -106,8 +114,8 @@ export default function Contatos() {
                   </h4>
                   <p className="text-gray-600">
                     Todos os nossos serviços possuem garantia. Utilizamos apenas
-                    peças originais e de primeira qualidade para assegurar o melhor
-                    desempenho do seu veículo.
+                    peças originais e de primeira qualidade para assegurar o
+                    melhor desempenho do seu veículo.
                   </p>
                 </div>
               </div>
@@ -145,17 +153,18 @@ export default function Contatos() {
                 <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
                   <ChartPie size={24} />
                 </div>
-              <div>
+                <div>
                   <h4 className="text-lg font-medium mb-1">
                     À frente do mercado
                   </h4>
                   <p className="text-gray-600">
-                    Buscando ampliar nossos serviços e oferecer o que há de melhor para nossos 
-                    clientes, estamos sempre atentos às novidades do mercado automotivo. 
-                    E somos a primeira oficina em Caxias do Sul a aceitar Bitcoin como forma de pagamento.
+                    Buscando ampliar nossos serviços e oferecer o que há de
+                    melhor para nossos clientes, estamos sempre atentos às
+                    novidades do mercado automotivo. E somos a primeira oficina
+                    em Caxias do Sul a aceitar Bitcoin como forma de pagamento.
                   </p>
                 </div>
-                </div>
+              </div>
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-[#FF6B00]/10 rounded-full flex items-center justify-center text-[#FF6B00] mr-4 flex-shrink-0">
                   <ThumbsUp size={24} />
@@ -166,7 +175,8 @@ export default function Contatos() {
                   </h4>
                   <p className="text-gray-600">
                     Com mais de 15 anos de experiência, nossa equipe de técnicos
-                    certificados possui vasta experiência em diversas áreas que abrangem a reparação automotiva.
+                    certificados possui vasta experiência em diversas áreas que
+                    abrangem a reparação automotiva.
                   </p>
                 </div>
               </div>
@@ -185,10 +195,18 @@ export default function Contatos() {
         </div>
       </div>
       <div className="mt-15 flex justify-center text-center">
-        <h3 className="text-3xl md:text-4xl font-bold mb-4">Nossa localização</h3></div>
-        <div className="flex justify-center mt-4 ">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4234.5125608973785!2d-51.13487862365711!3d-29.116193188856688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebd568b491167%3A0xa64c64784302309a!2sMarfec%20Servi%C3%A7os%20Automotivos!5e1!3m2!1spt-BR!2sbr!4v1757593932457!5m2!1spt-BR!2sbr" width="500" height="450" loading="lazy"></iframe>
-        </div>
+        <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          Nossa localização
+        </h3>
+      </div>
+      <div className="flex justify-center mt-4 ">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4234.5125608973785!2d-51.13487862365711!3d-29.116193188856688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ebd568b491167%3A0xa64c64784302309a!2sMarfec%20Servi%C3%A7os%20Automotivos!5e1!3m2!1spt-BR!2sbr!4v1757593932457!5m2!1spt-BR!2sbr"
+          width="500"
+          height="450"
+          loading="lazy"
+        ></iframe>
+      </div>
     </section>
   );
 }
