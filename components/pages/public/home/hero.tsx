@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeUp, stagger } from "@/lib/motion-presets";
 export default function MarfecQualidade() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -12,19 +14,27 @@ export default function MarfecQualidade() {
     }
   };
   return (
-    <section className="relative w-full bg-black text-white pt-24 pb-16 md:pt-32 md:pb-24">
+    <motion.section
+      className="relative w-full bg-black text-white pt-24 pb-16 md:pt-32 md:pb-24"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={stagger}
+    >
       <div className="absolute inset-0 bg-gradient-to-r from-black to-gray-900 opacity-90"></div>
        <div className="container mx-auto px-4 relative z-10">
          <div className="items-center flex flex-col md:pb-10">
            {/* <div> */}
-           <Image
-            src="/images/logos/FOTO DE PERFIL.png"
-            alt="Logo Marfec"
-            width={300}
-            height={50}
-            priority/>
+           <motion.div variants={fadeUp}>
+             <Image
+              src="/images/logos/FOTO DE PERFIL.png"
+              alt="Logo Marfec"
+              width={300}
+              height={50}
+              priority/>
+           </motion.div>
           </div>
-        <div className="max-w-3xl mx-auto text-center">
+        <motion.div className="max-w-3xl mx-auto text-center" variants={fadeUp}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Reparação automotiva em Caxias do Sul
           </h1>
@@ -51,8 +61,8 @@ export default function MarfecQualidade() {
             </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -61,15 +61,28 @@ import React from "react";
 import Link from "next/link";
 import { Bitcoin, Facebook, Instagram, Twitter } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeUp, stagger } from "@/lib/motion-presets";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-6 sm:py-12">
+    <motion.footer
+      className="bg-black text-white py-6 sm:py-12"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto px-4">
         {/* Top section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center md:text-left"
+          variants={stagger}
+        >
           {/* Logo & Description */}
-          <div className="items-center sm:items-start flex flex-col">
+          <motion.div
+            className="items-center sm:items-start flex flex-col"
+            variants={fadeUp}
+          >
           {/* <div> */}
             <Image
               src="/images/logos/FOTO DE PERFIL.png"
@@ -81,10 +94,10 @@ export default function Footer() {
             <p className="mt-2 text-gray-400">
               Nosso maior compromisso é com a sua satisfação e segurança. 
             </p>
-          </div>
+          </motion.div>
 
           {/* Navigation */}
-          <div>
+          <motion.div variants={fadeUp}>
             <nav className="flex justify-center md:justify-center space-x-6">
               <Link
                 href="/politica-de-privacidade"
@@ -99,10 +112,13 @@ export default function Footer() {
                 Termos de Uso
               </Link>
             </nav>
-          </div>
+          </motion.div>
 
           {/* Social Media */}
-        <div className="flex justify-center md:justify-end space-x-4">
+        <motion.div
+          className="flex justify-center md:justify-end space-x-4"
+          variants={fadeUp}
+        >
           <a
             href="https://btcmap.org/merchant/node:12548054548"
             aria-label="Bitcoin"
@@ -122,16 +138,19 @@ export default function Footer() {
           >
             <Instagram size={22} />
           </a>
-        </div>
+        </motion.div>
 
-        </div>
+        </motion.div>
 
         {/* Bottom section */}
-        <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        <motion.div
+          className="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+          variants={fadeUp}
+        >
           <p>© {new Date().getFullYear()} Marfec. Todos os direitos reservados.</p>
           <p className="mt-2 md:mt-0">CNPJ: 52.104.793/0001-92</p>
-        </div>
+        </motion.div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

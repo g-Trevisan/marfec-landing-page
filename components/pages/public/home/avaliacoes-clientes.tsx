@@ -1,7 +1,11 @@
 "use client";
 
+"use client";
+
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { motion } from "framer-motion";
+import { fadeUp, stagger } from "@/lib/motion-presets";
 interface TestimonialProps {
   name: string;
   text: string;
@@ -9,7 +13,10 @@ interface TestimonialProps {
 }
 function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
   return (
-    <div className="bg-white w-95 md:w-360 p-6 rounded-lg shadow-md border border-gray-100 content-center">
+    <motion.div
+      className="bg-white w-95 md:w-360 p-6 rounded-lg shadow-md border border-gray-100 content-center"
+      variants={fadeUp}
+    >
       <div className="flex content-center mb-4">
         {Array.from({
           length: 5,
@@ -30,7 +37,7 @@ function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
         </div>
         <span className="font-medium">{name}</span>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -93,9 +100,16 @@ export function AvaliacoesClientes() {
   //   }
   // };
   return (
-    <section id="testimonials" className="py-10 md:py-24">
+    <motion.section
+      id="testimonials"
+      className="py-10 md:py-24"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={stagger}
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <motion.div className="text-center mb-12" variants={fadeUp}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             O que Nossos Clientes Dizem
           </h2>
@@ -103,7 +117,7 @@ export function AvaliacoesClientes() {
             A satisfação dos clientes é a nossa maior recompensa! Mais avaliações como essas podem ser encontradas em nosso perfil do Google. Confira
             alguns depoimentos.
           </p>
-        </div>
+        </motion.div>
         <div className="relative content-center">
           <div className="flex overflow-hidden">
             <div
@@ -141,7 +155,10 @@ export function AvaliacoesClientes() {
             <ChevronRight size={20} />
           </button>
         </div>
-        <div className="flex justify-center mt-8">
+        <motion.div
+          className="flex justify-center mt-8"
+          variants={fadeUp}
+        >
           {testimonials.slice(0, testimonials.length - 2).map((_, index) => (
             <button
               key={index}
@@ -152,8 +169,8 @@ export function AvaliacoesClientes() {
               aria-label={`Ir para depoimento ${index + 1}`}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
