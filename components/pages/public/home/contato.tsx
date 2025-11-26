@@ -44,7 +44,7 @@ export default function Contatos() {
       ),
       action: {
         label: "Traçar rota",
-        href: "https://www.google.com/maps/dir/?api=1&destination=-29.116193188856688%2C-51.13487862365711",
+        href: "https://www.google.com/maps/dir/-29.116851,-51.1318299/Marfec+Ar+condicionado+Automotivo+-+Rua+Noralina+Julieta+Ribeiro+da+Silva+-+Serrano,+Caxias+do+Sul+-+RS/@-29.1165244,-51.1331185,18z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x951ebd568b491167:0xa64c64784302309a!2m2!1d-51.1323011!2d-29.1162583?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D",
       },
     },
     {

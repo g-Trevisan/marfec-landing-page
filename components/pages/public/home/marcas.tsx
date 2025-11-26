@@ -19,6 +19,10 @@ const brands = [
   { name: "Toyota", url: '/images/logos/toyota.png' },
   { name: "Volvo", url: '/images/logos/volvo.png' },
   { name: "VW", url: '/images/logos/vw.png' },
+  { name: "Fiat", url: '/images/logos/fiat.png' },
+  { name: "Chevy", url: '/images/logos/chevy.png' },
+  { name: "Peugeot", url: '/images/logos/peugeot.png' },
+  { name: "Citroen", url: '/images/logos/citroen.png' },
 ];
 
 export default function MarcasAtendidas() {
