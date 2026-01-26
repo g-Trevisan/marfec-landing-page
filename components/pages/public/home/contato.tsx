@@ -241,8 +241,8 @@ export default function Contatos() {
               </div>
               <iframe
                 title="Localização Marfec Serviços Automotivos"
-                src="https://www.google.com/maps/place/Marfec+Ar+condicionado+Automotivo/@-29.1161932,-51.1348786,17z/data=!3m1!4b1!4m6!3m5!1s0x951ebd568b491167:0xa64c64784302309a!8m2!3d-29.1161979!4d-51.1323037!16s%2Fg%2F11l2bzh7p9?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D"
-                loading="lazy"
+               src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d111551.65354050147!2d-51.162125!3d-29.106001!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDA2JzU4LjciUyA1McKwMDcnNTYuMiJX!5e0!3m2!1spt-BR!2sbr!4v1769469939978!5m2!1spt-BR!2sbr"  
+               loading="lazy"
                 className="absolute inset-0 h-full w-full border-0"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
