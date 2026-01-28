@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <main className="relative min-h-screen bg-black text-white">
+    <main className="relative min-h-screen bg-black text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black" />
       <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-[#FF6B00]/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 left-0 h-72 w-72 rounded-full bg-[#FF6B00]/10 blur-3xl" />
@@ -25,8 +25,8 @@ export default function NotFound() {
           Página não encontrada
         </h1>
         <p className="mt-4 max-w-xl text-base text-gray-300 md:text-lg">
-          A página que você tentou acessar não existe ou foi movida. Se
-          precisar de ajuda, fale com a equipe Marfec e iremos orientar você.
+          A página que você tentou acessar não existe ou foi movida. Se precisar
+          de ajuda, fale com a equipe Marfec e iremos orientar você.
         </p>
 
         <div className="mt-10 flex w-full max-w-md flex-col gap-4 sm:flex-row sm:justify-center">
