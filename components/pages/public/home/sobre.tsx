@@ -59,7 +59,7 @@ export default function Sobre() {
             </motion.div>
           </motion.div>
           <motion.div
-            className="relative h-64 w-full overflow-hidden rounded-lg sm:h-80 md:h-[400px]"
+            className="relative w-full overflow-hidden rounded-lg bg-white shadow-sm aspect-[4/3] sm:aspect-[5/4] md:aspect-[4/3]"
             variants={fadeUp}
           >
             <Image
@@ -67,7 +67,7 @@ export default function Sobre() {
               alt="Imagem da oficina ou equipe"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover object-center sm:object-[50%_35%]"
             />
           </motion.div>
         </div>
