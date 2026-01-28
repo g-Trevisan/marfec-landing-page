@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Battery, Wind, Car, Cpu, Gauge, Activity, Zap } from "lucide-react";
+import { Wind, Car, Cpu, Gauge, Activity, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/lib/motion-presets";
 interface ServiceCardProps {
@@ -22,7 +22,6 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
       <p className="text-gray-600">{description}</p>
     </motion.div>
   );
-  
 }
 export default function ServicosPrestados() {
   const services = [
@@ -111,5 +110,4 @@ export default function ServicosPrestados() {
       </motion.div>
     </motion.section>
   );
-  
 }

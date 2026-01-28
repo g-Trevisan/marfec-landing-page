@@ -80,6 +80,7 @@ export default function Header() {
               alt="Logo branco Marfec"
               width={80}
               height={50}
+              sizes="80px"
               priority
             />
           ) : (
@@ -88,6 +89,7 @@ export default function Header() {
               alt="Logo preto Marfec"
               width={80}
               height={50}
+              sizes="80px"
               priority
             />
           )}

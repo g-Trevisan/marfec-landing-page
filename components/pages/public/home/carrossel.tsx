@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState, type TouchEvent } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -67,8 +67,10 @@ function useVisibleCount() {
         setCount(1); // mobile
       } else if (window.innerWidth < 1024) {
         setCount(2); // tablet
-      } else {
+      } else if (window.innerWidth < 1280) {
         setCount(3); // desktop
+      } else {
+        setCount(4);
       }
     };
 
@@ -83,6 +85,11 @@ function useVisibleCount() {
 export default function Carrossel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCount = useVisibleCount();
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const touchDeltaX = useRef(0);
+  const touchDeltaY = useRef(0);
+  const swipeThreshold = 50;
 
   const nextSlide = () => {
     setCurrentIndex((prev) =>
@@ -94,6 +101,40 @@ export default function Carrossel() {
     setCurrentIndex((prev) =>
       prev === 0 ? galleryImages.length - visibleCount : prev - 1,
     );
+  };
+
+  const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
+    const touch = event.touches[0];
+    touchStartX.current = touch.clientX;
+    touchStartY.current = touch.clientY;
+    touchDeltaX.current = 0;
+    touchDeltaY.current = 0;
+  };
+
+  const handleTouchMove = (event: TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const touch = event.touches[0];
+    touchDeltaX.current = touch.clientX - touchStartX.current;
+    touchDeltaY.current = touch.clientY - touchStartY.current;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const absX = Math.abs(touchDeltaX.current);
+    const absY = Math.abs(touchDeltaY.current);
+
+    if (absX > swipeThreshold && absX > absY) {
+      if (touchDeltaX.current < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+    touchDeltaX.current = 0;
+    touchDeltaY.current = 0;
   };
 
   return (
@@ -130,7 +171,12 @@ export default function Carrossel() {
           </button>
 
           {/* Container do carrossel */}
-          <div className="overflow-hidden">
+          <div
+            className="overflow-hidden touch-pan-y"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
@@ -152,6 +198,7 @@ export default function Carrossel() {
                         sizes="(max-width: 640px) 100vw,
                                (max-width: 1024px) 50vw,
                                33vw"
+                        quality={80}
                         priority={index === 0}
                       />
                     </div>

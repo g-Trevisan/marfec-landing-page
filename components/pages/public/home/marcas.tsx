@@ -63,6 +63,7 @@ export default function MarcasAtendidas() {
                 className="object-contain max-h-full max-w-full"
                 width={120}
                 height={70}
+                sizes="(max-width: 640px) 90px, (max-width: 1024px) 120px, 140px"
               />
             </motion.div>
           ))}

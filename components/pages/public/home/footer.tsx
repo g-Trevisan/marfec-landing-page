@@ -59,10 +59,13 @@
 
 import React from "react";
 import Link from "next/link";
-import { Bitcoin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Bitcoin, Instagram } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/lib/motion-presets";
+
+const googleMapsUrl =
+  "https://www.google.com/maps/place/Marfec+Ar+condicionado+Automotivo/@-29.1161979,-51.1323037,947m/data=!3m1!1e3!4m8!3m7!1s0x951ebd568b491167:0xa64c64784302309a!8m2!3d-29.1161979!4d-51.1323037!9m1!1b1!16s%2Fg%2F11l2bzh7p9?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoASAFQAw%3D%3D";
 
 export default function Footer() {
   return (
@@ -88,12 +91,28 @@ export default function Footer() {
               src="/images/logos/FOTO DE PERFIL.png"
               alt="Logo Marfec"
               width={160}
-              height={50} 
-              priority
+              height={50}
+              sizes="(max-width: 640px) 140px, 160px"
             />
             <p className="mt-2 text-gray-400">
               Nosso maior compromisso é com a sua satisfação e segurança. 
             </p>
+            <div className="mt-4 flex flex-col gap-2 text-xs text-gray-400 sm:hidden">
+              <a
+                href="tel:+5554992739290"
+                className="transition-colors hover:text-white"
+              >
+                (54) 99273-9290
+              </a>
+              <a
+                href={googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white"
+              >
+                Rua Noralina Julieta Ribeiro da Silva, 1504 - Serrano
+              </a>
+            </div>
           </motion.div>
 
           {/* Navigation */}
