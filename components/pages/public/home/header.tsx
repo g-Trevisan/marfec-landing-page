@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Menu, Car } from "lucide-react";
+import { Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
+  SheetTitle,
   SheetTrigger,
-
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
@@ -128,13 +128,10 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="top" className="p-4">
+            <SheetTitle className="sr-only">Menu de navegação</SheetTitle>
             <div className="flex flex-col space-y-2">
               {NAV_LINKS.map((link) => (
-                <NavLink
-                  key={link.id}
-                  {...link}
-                  onClick={scrollToSection}
-                />
+                <NavLink key={link.id} {...link} onClick={scrollToSection} />
               ))}
               <NavLink
                 id="contact"
