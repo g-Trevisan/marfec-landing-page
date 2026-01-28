@@ -44,6 +44,9 @@ const testimonials = [
   },
 ];
 
+const googleReviewsUrl =
+  "https://www.google.com/maps/search/?api=1&query=Marfec%20Ar%20condicionado%20Automotivo%20Caxias%20do%20Sul";
+
 const averageRating =
   testimonials.reduce((total, item) => total + item.rating, 0) /
   testimonials.length;
@@ -73,35 +76,32 @@ function useVisibleCount() {
 function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
   return (
     <motion.article
-      className="group h-full rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#FF6B00]/30"
+      className="group relative h-full rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#FF6B00]/30 hover:shadow-lg"
       variants={fadeUp}
     >
-      <div className="flex items-center justify-between gap-4 mb-4">
-        <div className="flex items-center gap-1">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star
-              key={i}
-              size={18}
-              className={
-                i < rating ? "text-[#FF6B00] fill-[#FF6B00]" : "text-gray-300"
-              }
-            />
-          ))}
-        </div>
-        <span className="text-xs font-semibold uppercase tracking-wide text-gray-400">
-          Depoimento
-        </span>
+      <div className="flex items-center gap-1">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star
+            key={i}
+            size={18}
+            className={
+              i < rating ? "text-[#FF6B00] fill-[#FF6B00]" : "text-gray-300"
+            }
+          />
+        ))}
       </div>
-      <p className="text-gray-600 italic leading-relaxed">&quot;{text}&quot;</p>
-      <div className="mt-6 flex items-center gap-3">
+      <blockquote className="mt-4 text-[15px] leading-relaxed text-gray-600">
+        &quot;{text}&quot;
+      </blockquote>
+      <footer className="mt-6 flex items-center gap-3">
         <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#FF6B00]/10 text-[#FF6B00] font-semibold">
           {name.charAt(0)}
         </div>
         <div>
           <p className="font-semibold text-gray-900">{name}</p>
-          <p className="text-xs text-gray-400">Cliente Marfec</p>
+          <p className="text-xs text-gray-400">Avaliação no Google</p>
         </div>
-      </div>
+      </footer>
     </motion.article>
   );
 }
@@ -187,8 +187,19 @@ export function AvaliacoesClientes() {
               Google. Confira alguns depoimentos.
             </p>
           </motion.div>
-          <motion.div variants={fadeUp}>
+          <motion.div
+            variants={fadeUp}
+            className="flex flex-col items-center gap-3 lg:items-end"
+          >
             <RatingSummary />
+            <a
+              href={googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-[#FF6B00]/30 px-4 py-2 text-sm font-semibold text-[#FF6B00] transition-colors hover:bg-[#FF6B00] hover:text-white"
+            >
+              Ver mais avaliações
+            </a>
           </motion.div>
         </motion.div>
 
@@ -200,10 +211,7 @@ export function AvaliacoesClientes() {
           aria-label="Depoimentos de clientes"
           tabIndex={0}
         >
-          <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-16 bg-gradient-to-r from-gray-50 to-transparent sm:block" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-16 bg-gradient-to-l from-gray-50 to-transparent sm:block" />
-
-          <div className="overflow-hidden">
+          <div className="overflow-hidden p-4">
             <div
               className="flex items-stretch transition-transform duration-500 ease-in-out"
               style={{
