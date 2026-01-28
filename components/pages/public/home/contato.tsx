@@ -219,7 +219,7 @@ export default function Contatos() {
             </motion.div>
 
             <motion.div
-              className="relative min-h-[420px] overflow-hidden rounded-b-3xl lg:min-h-[520px] lg:rounded-bl-none lg:rounded-br-3xl"
+              className="relative min-h-[320px] overflow-hidden rounded-b-3xl sm:min-h-[420px] lg:min-h-[520px] lg:rounded-bl-none lg:rounded-br-3xl"
               variants={fadeUp}
               transition={{ duration: 0.7 }}
             >

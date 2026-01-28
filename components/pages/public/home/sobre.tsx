@@ -59,15 +59,15 @@ export default function Sobre() {
             </motion.div>
           </motion.div>
           <motion.div
-            className="bg h-[400px] rounded-lg flex items-center justify-center"
+            className="relative h-64 w-full overflow-hidden rounded-lg sm:h-80 md:h-[400px]"
             variants={fadeUp}
           >
             <Image
               src="/images/logos/equipe.jpg"
               alt="Imagem da oficina ou equipe"
-              width={320}
-              height={180}
-              className="object-cover rounded-lg"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
             />
           </motion.div>
         </div>

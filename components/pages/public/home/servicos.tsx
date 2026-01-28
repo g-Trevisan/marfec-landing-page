@@ -97,14 +97,14 @@ export default function ServicosPrestados() {
         </motion.div>
       </div>
       <motion.div
-        className="flex text-center justify-center mt-20"
+        className="flex justify-center mt-16 px-4 sm:mt-20"
         variants={fadeUp}
       >
         <a
           href="https://wa.me/54992739290"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-60 h-16 py-4 bg-[#FF6B00] mx- text-white text-lg rounded-full hover:bg-[black] transition-colors font-medium"
+          className="flex h-14 w-full max-w-xs items-center justify-center rounded-full bg-[#FF6B00] text-lg font-medium text-white transition-colors hover:bg-[black] sm:h-16 sm:w-60"
         >
           Solicitar orçamento
         </a>

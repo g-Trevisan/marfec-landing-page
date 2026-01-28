@@ -45,7 +45,7 @@ const testimonials = [
 ];
 
 const googleReviewsUrl =
-  "https://www.google.com/maps/search/?api=1&query=Marfec%20Ar%20condicionado%20Automotivo%20Caxias%20do%20Sul";
+  "https://www.google.com/maps/place/Marfec+Ar+condicionado+Automotivo/@-29.1161979,-51.1323037,947m/data=!3m1!1e3!4m8!3m7!1s0x951ebd568b491167:0xa64c64784302309a!8m2!3d-29.1161979!4d-51.1323037!9m1!1b1!16s%2Fg%2F11l2bzh7p9?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoASAFQAw%3D%3D";
 
 const averageRating =
   testimonials.reduce((total, item) => total + item.rating, 0) /
@@ -108,23 +108,26 @@ function AvaliacaoCard({ name, text, rating }: TestimonialProps) {
 
 function RatingSummary() {
   return (
-    <div className="inline-flex items-center gap-4 rounded-2xl border border-[#FF6B00]/20 bg-white px-5 py-3 shadow-sm">
-      <div className="flex items-center gap-1">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <Star
-            key={index}
-            size={16}
-            className="text-[#FF6B00] fill-[#FF6B00]"
-          />
-        ))}
+    <div className="inline-flex w-full max-w-xs items-center gap-4 rounded-2xl border border-gray-100 bg-white/80 px-5 py-4 shadow-sm backdrop-blur-sm sm:w-auto">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF6B00]/10 text-[#FF6B00] text-lg font-semibold">
+        {averageRating.toFixed(1)}
       </div>
-      <div className="text-left">
-        <p className="text-xs uppercase tracking-[0.2em] text-gray-400">
+      <div className="flex-1 text-left">
+        <p className="text-[11px] uppercase tracking-[0.25em] text-gray-400">
           Avaliação média
         </p>
-        <p className="text-lg font-semibold text-gray-900">
-          {averageRating.toFixed(1)} de 5
-        </p>
+        <div className="mt-2 flex items-center gap-2">
+          <div className="flex items-center gap-1">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <Star
+                key={index}
+                size={14}
+                className="text-[#FF6B00] fill-[#FF6B00]"
+              />
+            ))}
+          </div>
+          <span className="text-xs text-gray-500">entre clientes</span>
+        </div>
       </div>
     </div>
   );

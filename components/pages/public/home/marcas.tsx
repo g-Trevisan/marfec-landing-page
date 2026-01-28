@@ -47,22 +47,22 @@ export default function MarcasAtendidas() {
 
         {/* GRID de Logos */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-4 sm:gap-8 place-items-center"
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-3 sm:gap-6 place-items-center"
           variants={stagger}
         >
           {brands.map((brand, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl shadow-md p-6 flex items-center justify-center sm:w-40 sm:h-28 
+              className="bg-white rounded-xl shadow-md p-3 sm:p-5 flex items-center justify-center w-full max-w-[132px] h-24 sm:max-w-[176px] sm:h-32 overflow-hidden
                          transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               variants={fadeUp}
             >
               <Image
                 src={brand.url}
                 alt={brand.name}
-                className="object-contain"
+                className="object-contain max-h-full max-w-full"
                 width={120}
-                height={80}
+                height={70}
               />
             </motion.div>
           ))}
